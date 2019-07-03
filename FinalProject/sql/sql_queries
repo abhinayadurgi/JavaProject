@@ -1,0 +1,34 @@
+//QUIZ TABLE
+//table creation
+create table quiz (id bigint auto_increment,name varchar(255));
+//primary key 
+alter table quiz add primary key (id);
+
+//TABLE QUESTION
+//table creation
+create table question (question_id bigint auto_increment,quiz_id bigint,question varchar(255),topics varchar(255),difficulty int);
+//foreign key
+alter table question add foreign key (quiz_id) references quiz(id);
+
+
+//STUDENT TABLE
+create table STUDENT (student_id bigint auto_increment, name varchar(255));
+alter table student add primary key (student_id);
+
+//TABLE ANSWER
+//table creation
+create table ANSWER ( id bigint auto_increment,answer varchar(255),quiz_id int,question_id int,student_id int );
+alter table answer add primary key (id);
+alter table answer add foreign key (quiz_id) references quiz(id);
+alter table answer add foreign key (question_id) references question(question_id);
+alter table answer add foreign key (student_id) references student(student_id);
+
+//MCQQUESTION TABLE
+create table mcqquestion (mcqquestion_id bigint auto_increment,quiz_id bigint,question varchar(255),topics varchar(255),difficulty int);
+alter table mcqquestion add primary key (mcqquestion_id);
+alter table mcqquestion add foreign key (quiz_id) references quiz(id);
+
+//MCQCHOICE TABLE
+create table mcqchoice(mcqchoice_id bigint auto_increment,choice varchar(255),valid Boolean,mcqquestion_id int);
+alter table mcqchoice add primary key (mcqchoice_id);
+alter table mcqchoice add foreign key (mcqquestion_id) references mcqquestion(mcqquestion_id);

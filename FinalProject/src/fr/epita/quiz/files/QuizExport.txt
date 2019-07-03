@@ -1,0 +1,21 @@
+Name: Hagrid
+
+Question : What is java?
+Your Answer : prog lang
+
+Is java object oriented?
+1.yes
+2.no
+Your answer : 1
+
+Your MCQ  score : 1
+
+Question : What is java?
+Your Answer : programming kang
+
+Is java object oriented?
+1.yes
+2.no
+Your answer : 2
+
+Your MCQ  score : 0
